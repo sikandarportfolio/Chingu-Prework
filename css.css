@@ -1,0 +1,326 @@
+
+body{
+    background-color: #3AAFA9;
+  
+   background: linear-gradient( #3aafa9, #def2f1 );
+ */
+ }
+ nav{
+  display: flex;
+   position: fixed;
+   z-index: 1;
+   top: -1px; 
+  width: 100%;
+  //height: 208px; 
+ /*  This height adjusts the top horizontal bar on top  */
+  background-color:  #3aafa9;
+   overflow:hidden; 
+ /*   This centeres the overflowing boxes */
+   
+ }
+ 
+ nav a{
+    display: block;/* turns from inline to next line */
+   float: right;
+   font-family: sans-serif;
+     font-size: 22px;
+     color: white;
+     height: auto;
+   width: 323px;
+   
+ 
+     background-color: #2b7a76;
+    // border: 0.55px solid #C6E7CE;
+   
+       padding-top: 30px;
+     padding-right: 30px;
+     padding-bottom: 30px;
+     padding-left: 30px;
+ text-decoration: none;
+   border-radius: 1px;
+     
+ 
+ }
+ nav a:hover{
+  background-color:  #3aafa9;
+   letter-spacing: 3px;
+  pointer: cursor;
+    //border: 0.55px solid #2b7a78;
+   
+ }
+ .nav-flex > li {
+   flex: 1;
+ }
+ 
+ 
+ 
+ @media all and (max-width: 600px) {
+   
+   .nav-flex {
+     flex-wrap: wrap;
+   }
+   
+   .container > li {
+     flex-basis: 50%;
+   }
+ }
+ 
+ 
+ 
+ 
+ #logo {
+   float: left;
+  /*font*/
+  font-family: 'Lobster', sans-serif;
+   font-size: 48px;
+   padding: 22px;
+   letter-spacing: -1px;
+   text-shadow: 3px 3px 2px black;
+   
+   
+ //  color: #def2f1;
+ //  text-shadow: 3px 3px 5px #2b7a78;
+   
+   margin-top: -18px;
+   margin-left
+   }
+ 
+ .lego{
+   width: 30%;
+ }
+ 
+ #logo-img{
+    height: 84px;
+ }
+ #gradient
+ {
+   width: 100%;
+   height: 800px;
+   padding: 0px;
+   margin: 0px;
+ }
+ 
+ .parallax1{
+ /*     background-image: url("https://cdn-images-1.medium.com/max/1155/1*1h5VsMH4IW1T-ejq9p4c4g.jpeg");
+  */
+   
+    //background: linear-gradient( #3aafa9, #def2f1 );
+  background: #3aafa9;
+     /* Set a specific height */
+     height: 100%; 
+ 
+     /* Create the parallax scrolling effect */
+     background-attachment: fixed;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+ }
+ 
+ .parallax1{
+ /*     background-image: url("https://cdn-images-1.medium.com/max/1155/1*1h5VsMH4IW1T-ejq9p4c4g.jpeg");
+  */
+   
+    //background: linear-gradient( #3aafa9, #def2f1 );
+  background: #3aafa9;
+     /* Set a specific height */
+     height: 100%; 
+ 
+     /* Create the parallax scrolling effect */
+     background-attachment: fixed;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+ }
+ 
+ .parallax1 h1{
+   padding: 40px;
+   margin-top: 85px;
+   text-align:center;
+   font-size: 400%;
+   font-family: lobster, serif;
+   color: #def2f1;
+   text-shadow: 3px 3px 5px #2b7a78;
+  
+   }
+ /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+ @media only screen and (max-device-width: 1366px) {
+     .parallax {
+         background-attachment: scroll;
+     }
+ }
+ .text-box{
+   font-family: sans-serif;
+   color: #feffff;
+   padding: 10px;
+   font-size: 120%;
+   text-shadow: 1px 1px 1px #2b7a78;
+   
+ }
+ .blurb{
+ 
+   font-family: sans-serif;
+   color: #feffff;
+   padding: 100px;
+   margin-bottom: 100px;
+   font-size: 120%;
+   text-shadow: 1px 1px 1px #2b7a78;
+  // border: 1px solid white;
+ 
+ }
+ 
+ #tagline{
+   position: fixed;
+   bottom: 0px;
+   z-index: 20;
+   margin-bottom: -5px;
+   width: 100%;
+   font-family: sans-serif;
+   font-size: 10px;
+   text-align: center;
+   color: white;
+   letter-spacing: 2px;
+   background-color: #2b7a76;
+ }
+ 
+ #blurb-img{
+   
+   float: right;
+   margin: -5px;
+   padding-left: 40px;
+   position: relative;
+   height: 150px;
+   top: 10px;
+   z-index:0;
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ /* 
+ <!-- Time picker   --> */
+ #container {
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   
+ }
+ .center-any-elem{
+ display: flex;
+   flex-wrap: wrap;
+   text-align: center;
+   justify-content: center;
+   
+ }
+ .bottom-gap{
+   margin-bottom: 40px;
+   
+ }
+ .availability-control-container {
+   display: inline-block;
+ }
+ .flex-container {
+   display: flex;
+   background-color: #2b7a76;
+ /*    */
+   padding-bottom: 15px;
+   padding-top: 5px;
+ }
+ .flex-container.h {
+   flex-direction: column;
+ }
+ .flex-container.v {
+   flex-direction: row;
+   padding-right: 15px;
+ }
+ .flex-container .day.v:nth-of-type(2) .time-slot {
+   border-left: none;
+ }
+ .flex-container .day.v:last-of-type .time-slot {
+   border-right: #C8C8C8 1px solid;
+ }
+ .flex-container:not(.readonly) .time-slot:hover {
+   background-color: #BBDEFB;
+ }
+ .day-header {
+   text-align: center;
+   text-transform: uppercase;
+   font-size: .8em;
+   padding: 5px 0;
+   background-color: #2b7a76;
+   border: 1px dashed #2b7ac6;
+   color: #fff;
+ }
+ .day-header.h {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   min-width: 40px;
+ }
+ .time-markers {
+   display: flex;
+   background-color: #2b7a76;
+   justify-content: space-around;
+ }
+ .time-markers.h {
+   flex-direction: row;
+   margin: 5px 0 10px 25px;
+   font-size: .7em;
+ }
+ .time-markers.v {
+   flex-direction: column;
+   min-width: 50px;
+   max-width: 60px;
+   padding-top: 15px;
+   margin: -5px 0 -15px 0;
+ }
+ .time-marker {
+   text-align: center;
+   min-width: 31px;
+   color: #fff;
+   font-size: .9em;
+ }
+ .timeslot-container {
+   display: flex;
+   flex-direction: column;
+ }
+ .day {
+   display: flex;
+ }
+ .day.h {
+   flex-direction: row;
+ }
+ .day.v {
+   flex-direction: column;
+ }
+ .time-slot {
+   background-color: #def2f1;
+   min-height: 30px;
+   border-top: #C8C8C8 1px solid;
+   border-left: #C8C8C8 1px solid;
+ }
+ .time-slot.h {
+   min-width: 38px;
+ }
+ .time-slot.v {
+   min-width: 60px;
+ }
+ .selected {
+   background-color: #E7AAC7;
+ }
+ .selecting {
+   background-color: #7E57C2;
+ }
+ .removing {
+   background-color: #fff;
+ }
+ .highlighted {
+   background-color: #A8C0E3;
+ }
+ .matched {
+   background-color: #906BAB;
+ }
+ 
+ /* 
+ <!-- Time picker   --> */
+ 
