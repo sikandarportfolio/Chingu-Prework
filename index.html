@@ -5,16 +5,14 @@
         <meta charset="UTF-8">
         <title>Embedded Style Sheet</title>
         <link href="css.css" rel="stylesheet" type="text/css">
-        <script src="JavaScript.js"></script>
-
-      
-      </head>    
+        <!-- <script src="JavaScript.js"></script> -->
+    </head>    
 
 
 <body>
-  <div>
-  <h2>Today lets look at two things that are almost the same in CSS. (but not really)</h2>
-    <p>Both define a group of styles that can be selected to be applied together to an element.</p>
+  <div id="header">
+  <h2>Book Finder</h2>
+    <p>Search for any book</p>
   </div>
     
   
@@ -24,19 +22,24 @@
     <li> Used where the style group must be applied to multiple elements</li>
     <li> Defined with .</li>
     <li> Called with class="xxxx"</li>  
+  
     </ul>
+    <div id="content"></div>
+    <script>
+      function handleResponse(response) {
+      for (var i = 0; i < response.items.length; i++) {
+        var item = response.items[i];
+        // in production code, item.text should have the HTML entities escaped.
+        document.getElementById("content").innerHTML += "<br>" + item.volumeInfo.title;
+      }
+    }
+    </script>
+    <script src="https://www.googleapis.com/books/v1/volumes?q=harry+potter&callback=handleResponse"></script>
+ <!--  -->
+  
   </div>
   
   
   
-  <div class="anId">
-  <h1>A CSS ID</h1>
-  <ul>
-    <li> Used to target one particular element with the style group</li>
-    <li> Defined with #</li>
-    <li> id="xxxx"</li>  
-    </ul>
-    
-    </div>
-    </body>
-    </html>
+  </body>
+  </html>

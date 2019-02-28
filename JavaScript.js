@@ -1,2 +1,2 @@
-alert("Welcome to the CSS lesson series")
+//alert("Welcome to the CSS lesson series")
 

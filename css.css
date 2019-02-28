@@ -2,48 +2,24 @@
 body{
   background-color:#BFD3C1;
   color: #694F5D;
-  
   font-family:Sans-Serif;
 }
 .aClass{
-  position:absolute;
-  margin:0px 20px 20px 200px;
-  left:0;
-  width: 400px;  
+ margin:0px 20px 20px 200px;
+  padding: 20px;
+  width: 800px;  
    background-color: #68A691;
-  font-size: 130%;
- 
+  font-size: 130%; 
 }
-h1{
-  text-align:center;
-}
-.anId{
-  position:absolute;
-  margin:0px 200px 20px 20px;
-  right:0;
-  width: 400px;
-  background-color: #68A691;
-  font-size: 130%;
- 
-  
-}
- h2{
-  text-align: center;
+
+h2{
   font-size: 220%;
-  
-  
-  
-}
+  }
 
-p{
-    text-align: center;
-
-}
-div{
+#header{
+  text-align: center;
   padding: 9px;
   margin: 20px;
   border: 2px solid grey;
   background-color: #B2b6AB;
-
- 
 }
