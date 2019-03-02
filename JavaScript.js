@@ -32,13 +32,13 @@ for (var i = 0; i < response.items.length; i++) {
   var item = response.items[i];
   // in production code, item.text should have the HTML entities escaped.
   document.getElementById("picId").src=item.volumeInfo.imageLinks.thumbnail;
+  document.getElementById("linkMore").href=item.volumeInfo.previewLink;
+  
   document.getElementById("content").innerHTML += "<br>" + item.volumeInfo.title;
   document.getElementById("content").innerHTML += "<br>" +"Written by: "+ item.volumeInfo.authors;
   document.getElementById("content").innerHTML += "<br>" +"Published by: "+ item.volumeInfo.publisher+                                                                         
                                                 "<p>--------------------------------------------------</p>";
  
-
-
 }
 }
 //Each item in the list should include the book's author, title, and publishing company, as well as a picture of the book.
