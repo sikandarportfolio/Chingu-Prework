@@ -41,3 +41,13 @@ h2{
   background-color: #68A6A1;
   font-size: 130%; 
 }
+#picId{
+  margin: right;
+  position: inline;
+  padding: 10px;
+  text-align: center;
+  background-color: #68A6A1;
+  
+
+  
+}
