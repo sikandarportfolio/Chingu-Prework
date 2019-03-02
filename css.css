@@ -5,9 +5,9 @@ body{
   font-family:Sans-Serif;
 }
 .aClass{
- margin:0px 20px 20px 200px;
+ margin:0px 20px 20px 20px;
   padding: 20px;
-  width: 800px;  
+  width: fill;  
    background-color: #68A691;
   font-size: 130%; 
 }
