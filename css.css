@@ -32,3 +32,12 @@ h2{
   text-align: center;
   cursor: pointer;
 }
+
+#content{
+  margin: auto;
+  width: 24%;
+  padding: 10px;
+  text-align: center;
+  background-color: #68A6A1;
+  font-size: 130%; 
+}
