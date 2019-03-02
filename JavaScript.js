@@ -12,9 +12,9 @@ nameField = document.getElementById('nameField').value;
 var result = document.getElementById('result');
 result.textContent = 'Your searched for: ' +"'"+ nameField+"'";
 url2=nameField;
-//alert('getuserName');
+//upto here gets user input
 
-// 
+// after this generates URL with user input
 var script = document.createElement("script");
 //alert('bookAsk');
 script.src = url + url2 + url3
@@ -26,18 +26,9 @@ var subButton = document.getElementById('subButton');   //Adss book name in disp
 subButton.addEventListener('click', getUserName, false); 
 
 
-// var subButton1 = document.getElementById('subButton1');   //Adss book name in dispaly
-// subButton1.addEventListener('click', bookAsk, false); 
 
-// function bookAsk(){
-// var script = document.createElement("script");
-// alert('bookAsk');
-// script.src = url + url2 + url3
-// document.body.appendChild(script);
-// //Make the url here
 
-// }
-function handleResponse(response) {
+function handleResponse(response) {                   //populates search results
 for (var i = 0; i < response.items.length; i++) {
   var item = response.items[i];
   // in production code, item.text should have the HTML entities escaped.
