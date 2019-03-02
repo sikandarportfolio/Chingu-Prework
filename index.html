@@ -15,17 +15,47 @@
     <p>Search for any book</p>
   </div>
     
-  
+  <!-- The form -->
   <div class="aClass">
-    <h1>A CSS Class</h1>
-  <ul>
-    <li> Used where the style group must be applied to multiple elements</li>
-    <li> Defined with .</li>
-    <li> Called with class="xxxx"</li>  
-  
-    </ul>
-    <div id="content"></div>
-    <script>
+      <div class='wrapper'>
+          <form id='nameForm'>
+          <div class='form-uname'>
+              <lable id='nameLable' for='nameField'>Create a username:</lable>
+              <input id='nameField' type='text' maxlength='25'></input>
+          </div>
+          <div class='form-sub'>
+              <button id='subButton' type='button'>Print your name!</button>
+          </div>
+          </form>
+          
+          <div>
+              <p id='result'></p></div>
+          </div>
+   
+          <div id="content"></div>
+   
+   
+   
+   <script>
+     var nameField;
+      function getUserName() {
+nameField = document.getElementById('nameField').value;
+var result = document.getElementById('result');
+
+if (nameField.length < 3) {
+    result.textContent = 'Username must contain at least 3 characters';
+    //alert('Username must contain at least 3 characters');
+} else {
+    result.textContent = 'Your username is: ' + nameField;
+    //alert(nameField);
+}
+}
+
+var subButton = document.getElementById('subButton');
+subButton.addEventListener('click', getUserName, false); 
+
+
+
       function handleResponse(response) {
       for (var i = 0; i < response.items.length; i++) {
         var item = response.items[i];
@@ -33,7 +63,12 @@
         document.getElementById("content").innerHTML += "<br>" + item.volumeInfo.title;
       }
     }
+
+
+
+    
     </script>
+
     <script src="https://www.googleapis.com/books/v1/volumes?q=harry+potter&callback=handleResponse"></script>
  <!--  -->
   
