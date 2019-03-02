@@ -6,6 +6,7 @@ body{
 }
 .aClass{
  margin:0px 20px 20px 20px;
+ text-align: left;
   padding: 20px;
   width: fill;  
    background-color: #68A691;
@@ -22,4 +23,12 @@ h2{
   margin: 20px;
   border: 2px solid grey;
   background-color: #B2b6AB;
+}
+#nameForm{
+  text-align: center;
+}
+.form-sub{
+  padding: 20px; 
+  text-align: center;
+  cursor: pointer;
 }

@@ -1,32 +1,42 @@
 
-//Make the url here 
-var url="https://www.googleapis.com/books/v1/volumes?q=jon+snow&callback=handleResponse";
-var url2="";
-var url3="";
-var script = document.createElement("script");
-script.src = url
-document.body.appendChild(script);
-//Make the url here
 
 var nameField;
+var hold;
+var url="https://www.googleapis.com/books/v1/volumes?q=";
+var url2;
+var url3="&callback=handleResponse";
+
+
 function getUserName() {
 nameField = document.getElementById('nameField').value;
 var result = document.getElementById('result');
+result.textContent = 'Your searched for: ' +"'"+ nameField+"'";
+url2=nameField;
+//alert('getuserName');
 
-if (nameField.length < 3) {
-result.textContent = 'Book name must contain at least 3 characters';
-//alert('Username must contain at least 3 characters');
-} else {
-result.textContent = 'Your Book name is: ' + nameField;
-//alert(nameField);
-}
+// 
+var script = document.createElement("script");
+//alert('bookAsk');
+script.src = url + url2 + url3
+document.body.appendChild(script);
+// 
 }
 
 var subButton = document.getElementById('subButton');   //Adss book name in dispaly
 subButton.addEventListener('click', getUserName, false); 
 
 
+// var subButton1 = document.getElementById('subButton1');   //Adss book name in dispaly
+// subButton1.addEventListener('click', bookAsk, false); 
 
+// function bookAsk(){
+// var script = document.createElement("script");
+// alert('bookAsk');
+// script.src = url + url2 + url3
+// document.body.appendChild(script);
+// //Make the url here
+
+// }
 function handleResponse(response) {
 for (var i = 0; i < response.items.length; i++) {
   var item = response.items[i];
@@ -34,6 +44,3 @@ for (var i = 0; i < response.items.length; i++) {
   document.getElementById("content").innerHTML += "<br>" + item.volumeInfo.title;
 }
 }
-
-
-
